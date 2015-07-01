@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[Person](
+	[Id] [int] IDENTITY(1,1) NOT NULL Primary key,
+	[FirstName] [nvarchar](50) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[Gender] [char](1) NULL,
+	[DateOfBirth] [datetime] NULL)
+	
+	
+INSERT INTO [dbo].[Person]([FirstName],[LastName],[Gender],[DateOfBirth])VALUES('Tom','Andrew','M','1988-2-10 00:00:00')
+INSERT INTO [dbo].[Person]([FirstName],[LastName],[Gender],[DateOfBirth])VALUES('Andrew','peter','M','1987-02-25 00:00:00')
+INSERT INTO [dbo].[Person]([FirstName],[LastName],[Gender],[DateOfBirth])VALUES('Anne','Marry','F','1985-03-03 00:00:00')
+INSERT INTO [dbo].[Person]([FirstName],[LastName],[Gender],[DateOfBirth])VALUES('Lindsay','Martin','F','1980-02-25 00:00:00')
+INSERT INTO [dbo].[Person]([FirstName],[LastName],[Gender],[DateOfBirth])VALUES('Rich','Ng','M','1960-02-25 00:00:00')
+
+SELECT   Id, FirstName, LastName, Gender, DateOfBirth FROM   Person WHERE (Gender = 'M')
+
+UPDATE Person SET FirstName ='Paul' where (FirstName='Tom')
+UPDATE Person SET LastName ='silva' where (DateOfBirth='1987-02-25 00:00:00')
